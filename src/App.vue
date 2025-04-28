@@ -1,47 +1,66 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="app-container">
+    <!-- 🔵 블러 배경 레이어 추가 -->
+    <div class="bg-blobs">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
     </div>
-  </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <!-- 🔸 실제 페이지 컴포넌트 -->
+    <router-view v-slot="{ Component }">
+      <transition name="page" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+.bg-blobs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  mix-blend-mode: overlay;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.blob1 {
+  background: #a5f3fc;
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 20%;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+.blob2 {
+  background: #fcd34d;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 60%;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.blob3 {
+  background: #fca5a5;
+  width: 200px;
+  height: 200px;
+  top: 70%;
+  left: 10%;
+}
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  background: #f8f8f8;
+  overflow: hidden;
 }
 </style>

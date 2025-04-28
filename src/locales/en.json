@@ -1,0 +1,30 @@
+{
+  "app": {
+    "name": "Multicultural Student App"
+  },
+  "common": {
+    "next": "Next",
+    "prev": "Previous",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "seeMore": "See More",
+    "close": "Close"
+  },
+  "login": {
+    "title": "Grow Together",
+    "subtitle": "Customized services for multicultural/at-risk students",
+    "kakao": "Login with Kakao",
+    "naver": "Login with Naver",
+    "apple": "Login with Apple",
+    "terms": "By logging in, you agree to our Terms of Service and Privacy Policy."
+  },
+  "home": {
+    "greeting": "Hello, {name}",
+    "subtitle": "Check out your customized services",
+    "diagnosisResults": "Diagnosis Results",
+    "seeDetails": "See Details",
+    "recommendedServices": "Recommended Services"
+  }
+}
