@@ -45,6 +45,8 @@ body {
 .bg-mint-50 { background-color: var(--mint-50); }
 .bg-mint-100 { background-color: var(--mint-100); }
 .bg-mint-600 { background-color: var(--mint-600); }
+.bg-mint-700 { background-color: var(--mint-700); }
+.hover\:bg-mint-600:hover { background-color: var(--mint-600); }
 .hover\:bg-mint-700:hover { background-color: var(--mint-700); }
 .text-mint-600 { color: var(--mint-600); }
 .text-mint-800 { color: var(--mint-800); }

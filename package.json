@@ -15,6 +15,7 @@
     "tailwindcss": "^4.1.4",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
+    "vue-tippy": "^6.7.0",
     "vue3-touch-events": "^5.0.13"
   },
   "devDependencies": {
