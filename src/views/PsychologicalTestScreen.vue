@@ -42,7 +42,6 @@
         <div class="w-full bg-mint-100 rounded-full h-2 mb-6">
           <div class="bg-yellow-400 h-2 rounded-full" :style="{ width: `${progress}%` }"></div>
         </div>
-        
         <h3 class="text-lg font-semibold text-mint-800 mb-4">
           나는 새로운 친구를 사귀는 것이 어렵게 느껴진다.
         </h3>

@@ -7,12 +7,14 @@
       <div class="blob blob3"></div>
     </div>
 
-    <!-- 🔸 실제 페이지 컴포넌트 -->
-    <router-view v-slot="{ Component }">
-      <transition name="page" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <!-- 🔸 메인 컨텐츠 (가로폭 제한, 반응형) -->
+    <div class="page-container">
+      <router-view v-slot="{ Component }">
+        <transition name="page" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
   </div>
 </template>
 
@@ -62,5 +64,21 @@
   min-height: 100vh;
   background: #f8f8f8;
   overflow: hidden;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    max-width: 900px;
+  }
 }
 </style>
