@@ -66,19 +66,4 @@
   overflow: hidden;
 }
 
-.page-container {
-  width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 1024px) {
-  .page-container {
-    max-width: 900px;
-  }
-}
 </style>

@@ -75,8 +75,8 @@ const 심리상담 = [
     badgeText: "상담",
     badgeBgColor: "bg-pink-500",
     badgeTextColor: "text-white",
-    link: "/counseling",
-    linkText: "상담 신청"
+    link: "/videos",
+    linkText: "상담 시청"
   },
   {
     title: "오프라인 기관 안내",

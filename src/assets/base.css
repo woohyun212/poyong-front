@@ -4,6 +4,9 @@
 :root {
   --mint-50: #f0fdf9;
   --mint-100: #ccfbef;
+  --mint-200: #99f6e4;
+  --mint-300: #5eead4;
+  --mint-400: #2dd4bf;
   --mint-600: #0d9488;
   --mint-700: #0f766e;
   --mint-800: #115e59;
@@ -44,13 +47,25 @@ body {
 /* 기본 색상 클래스들 */
 .bg-mint-50 { background-color: var(--mint-50); }
 .bg-mint-100 { background-color: var(--mint-100); }
+.bg-mint-200 { background-color: var(--mint-200); }
+.bg-mint-300 { background-color: var(--mint-300); }
+.bg-mint-400 { background-color: var(--mint-400); }
 .bg-mint-600 { background-color: var(--mint-600); }
 .bg-mint-700 { background-color: var(--mint-700); }
+.hover\:bg-mint-200:hover { background-color: var(--mint-200); }
+.hover\:bg-mint-300:hover { background-color: var(--mint-300); }
+.hover\:bg-mint-400:hover { background-color: var(--mint-400); }
 .hover\:bg-mint-600:hover { background-color: var(--mint-600); }
 .hover\:bg-mint-700:hover { background-color: var(--mint-700); }
+.text-mint-200 { color: var(--mint-200); }
+.text-mint-300 { color: var(--mint-300); }
+.text-mint-400 { color: var(--mint-400); }
 .text-mint-600 { color: var(--mint-600); }
 .text-mint-800 { color: var(--mint-800); }
 .border-mint-100 { border-color: var(--mint-100); }
+.border-mint-200 { border-color: var(--mint-200); }
+.border-mint-300 { border-color: var(--mint-300); }
+.border-mint-400 { border-color: var(--mint-400); }
 .hover\:bg-mint-50:hover { background-color: var(--mint-50); }
 
 .bg-yellow-50 { background-color: var(--yellow-50); }

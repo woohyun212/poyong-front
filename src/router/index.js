@@ -72,12 +72,36 @@ const routes = [
         },
     },
     {
-        path: '/map_test',
-        name: 'KakaoMap',
-        component: () => import('../components/common/KakaoMaps.vue'),
+        path: '/chatbot',
+        name: 'Chatbot',
+        component: () => import('../views/ChatbotScreen.vue'),
         meta: {
-            title: '카카오맵 컴포넌트'
-        },
+            title: 'AI 챗봇 상담'
+        }
+    },
+    {
+        path: '/qr',
+        name: 'QR',
+        component: () => import('../views/QRScreen.vue'),
+        meta: {
+            title: '학생 QR 인증'
+        }
+    },
+    {
+        path: '/qr-verify',
+        name: 'QRVerify',
+        component: () => import('../views/QRVerifyScreen.vue'),
+        meta: {
+            title: 'QR 인증번호 입력'
+        }
+    },
+    {
+        path: '/teacher-report',
+        name: 'TeacherReport',
+        component: () => import('../views/TeacherReportScreen.vue'),
+        meta: {
+            title: '학생 리포트 열람'
+        }
     },
     // 404 페이지
     {

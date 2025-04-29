@@ -13,6 +13,23 @@
   position: relative;
 }
 
+.page-container {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    max-width: 900px;
+    width: 50vw;
+  }
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;
