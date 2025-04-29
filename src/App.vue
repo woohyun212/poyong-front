@@ -33,6 +33,7 @@
   filter: blur(80px);
   opacity: 0.5;
   mix-blend-mode: overlay;
+  animation: floatBlob 20s ease-in-out infinite;
 }
 
 .blob1 {
@@ -41,6 +42,7 @@
   height: 300px;
   top: 10%;
   left: 20%;
+  animation-delay: 0s;
 }
 
 .blob2 {
@@ -49,6 +51,7 @@
   height: 400px;
   top: 50%;
   left: 60%;
+  animation-delay: 5s;
 }
 
 .blob3 {
@@ -57,6 +60,25 @@
   height: 200px;
   top: 70%;
   left: 10%;
+  animation-delay: 2.5s;
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  25% {
+    transform: translate(100px, -60px) scale(1.1);
+  }
+  50% {
+    transform: translate(-80px, 40px) scale(1.15);
+  }
+  75% {
+    transform: translate(60px, 80px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 .app-container {

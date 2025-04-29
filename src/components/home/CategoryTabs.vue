@@ -5,7 +5,7 @@
       :key="category"
       @click="$emit('change', category)"
       :class="[
-        'px-5 py-2 rounded-full text-sm font-semibold transition-colors duration-300 whitespace-nowrap',
+        'px-8 py-3.5 rounded-full text-sm font-semibold transition-colors duration-300 whitespace-nowrap',
         activeCategory === category
           ? 'bg-mint-700 text-white shadow-md'
           : 'bg-white text-black border border-mint-100 hover:bg-mint-600 hover:text-white'

@@ -37,40 +37,37 @@
       </div>
     </div>
 
-    <!-- 진단 카테고리 탭 -->
-    <div class="backdrop-blur-lg bg-white/70 p-6 border-b border-white/50 sticky top-[104px] z-10">
-      <CategoryTabs
-        :categories="categories"
-        :activeCategory="activeCategory"
-        @change="selectCategory"
-      />
-    </div>
-
     <div class="p-6">
       <!-- 진단 결과 요약 -->
-      <div class="backdrop-blur-lg bg-white/70 rounded-3xl shadow-xl p-6 border border-white/50 mb-6">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="text-lg font-semibold text-mint-800">진단 결과</h2>
-          <router-link to="/psych-test" class="text-mint-600 text-sm font-medium">자세히 보기</router-link>
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold text-mint-800">진단 결과</h2>
+        <router-link to="/psych-test" class="text-mint-600 text-sm font-medium">자세히 보기</router-link>
+      </div>
+      <div class="backdrop-blur-lg bg-white/70 p-4 rounded-3xl shadow border border-white/50 flex space-x-3 mb-6">
+        <div class="flex-1 bg-yellow-100 rounded-xl p-3 text-center">
+          <div class="text-yellow-600 font-medium text-sm">학습</div>
+          <div class="text-yellow-800 font-bold text-xl">주의</div>
         </div>
-        <div class="flex space-x-3">
-          <div class="flex-1 bg-yellow-100 rounded-xl p-3 text-center">
-            <div class="text-yellow-600 font-medium text-sm">학습</div>
-            <div class="text-yellow-800 font-bold text-xl">주의</div>
-          </div>
-          <div class="flex-1 bg-mint-100 rounded-xl p-3 text-center">
-            <div class="text-mint-600 font-medium text-sm">심리</div>
-            <div class="text-mint-800 font-bold text-xl">양호</div>
-          </div>
-          <div class="flex-1 bg-red-100 rounded-xl p-3 text-center">
-            <div class="text-red-600 font-medium text-sm">사회성</div>
-            <div class="text-red-800 font-bold text-xl">위험</div>
-          </div>
+        <div class="flex-1 bg-mint-100 rounded-xl p-3 text-center">
+          <div class="text-mint-600 font-medium text-sm">심리</div>
+          <div class="text-mint-800 font-bold text-xl">양호</div>
+        </div>
+        <div class="flex-1 bg-red-100 rounded-xl p-3 text-center">
+          <div class="text-red-600 font-medium text-sm">사회성</div>
+          <div class="text-red-800 font-bold text-xl">위험</div>
         </div>
       </div>
 
+<!--      <div class="backdrop-blur-lg bg-white/70 p-4 rounded-3xl shadow border border-white/50 mb-6">-->
+        <CategoryTabs
+          :categories="categories"
+          :activeCategory="activeCategory"
+          @change="selectCategory"
+        />
+<!--      </div>-->
+
       <!-- 추천 서비스 -->
-      <h2 class="text-lg font-semibold text-mint-800 mb-4">추천 서비스</h2>
+      <h2 class="text-lg font-semibold text-mint-800 mt-4 mb-4">추천 서비스</h2>
       <RecommendationCard :items="filteredRecommendations" />
     </div>
 
