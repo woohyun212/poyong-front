@@ -3,3 +3,10 @@ dist
 npm-debug.log
 .DS_Store
 .env
+.idea
+.vscode
+README.md
+.git
+Dockerfile
+docker-compose.yml
+package-lock.json

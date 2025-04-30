@@ -58,7 +58,7 @@
 
 <script setup>
 import BottomNavigation from '@/components/common/BottomNavigation.vue'
-import FacilityCard from '@/components/facility/FacilityCard.vue'
+import FacilityCard from '@/components/facility/facilityCard.vue'
 import { facilityListData } from '@/data/facilityListData'
 import { ref, computed, onMounted, watch } from 'vue'
 

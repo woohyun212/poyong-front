@@ -93,42 +93,42 @@ const 심리상담 = [
 ]
 
 const 디지털기기지원 = [
+  // {
+  //   title: "디지털 기기 지원",
+  //   description: "가정에 필요한 태블릿/노트북 대여",
+  //   icon: Monitor,
+  //   bgColor: "bg-green-100",
+  //   iconColor: "text-green-600",
+  //   badgeText: "지원",
+  //   badgeBgColor: "bg-green-500",
+  //   badgeTextColor: "text-white",
+  //   link: "/facilities",
+  //   linkText: "지원 정보"
+  // },
   {
-    title: "디지털 기기 지원",
-    description: "가정에 필요한 태블릿/노트북 대여",
+    title: "디지털 배움터",
+    description: "스마트러닝 콘텐츠 제공",
     icon: Monitor,
     bgColor: "bg-green-100",
     iconColor: "text-green-600",
     badgeText: "지원",
     badgeBgColor: "bg-green-500",
     badgeTextColor: "text-white",
-    link: "/facilities",
+    link: "/smart-learning",
     linkText: "지원 정보"
   },
-  {
-    title: "스마트 러닝 지원",
-    description: "스마트러닝 기기 및 콘텐츠 제공",
-    icon: Monitor,
-    bgColor: "bg-green-100",
-    iconColor: "text-green-600",
-    badgeText: "지원",
-    badgeBgColor: "bg-green-500",
-    badgeTextColor: "text-white",
-    link: "/facilities",
-    linkText: "지원 정보"
-  },
-  {
-    title: "디지털 교육 프로그램",
-    description: "컴퓨터 기초 교육 및 장비 지원",
-    icon: Monitor,
-    bgColor: "bg-green-100",
-    iconColor: "text-green-600",
-    badgeText: "지원",
-    badgeBgColor: "bg-green-500",
-    badgeTextColor: "text-white",
-    link: "/facilities",
-    linkText: "지원 정보"
-  }
+  // {
+  //   title: "디지털 교육 프로그램",
+  //   description: "컴퓨터 기초 교육 및 장비 지원",
+  //   icon: Monitor,
+  //   bgColor: "bg-green-100",
+  //   iconColor: "text-green-600",
+  //   badgeText: "지원",
+  //   badgeBgColor: "bg-green-500",
+  //   badgeTextColor: "text-white",
+  //   link: "/facilities",
+  //   linkText: "지원 정보"
+  // }
 ]
 
 export const recommendationData = {

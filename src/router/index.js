@@ -103,6 +103,12 @@ const routes = [
             title: '학생 리포트 열람'
         }
     },
+    // router/index.js 또는 router.ts
+    {
+        path: '/smart-learning',
+        name: 'SmartLearningContent',
+        component: () => import('@/views/SmartLearningContentScreen.vue')
+    },
     // 404 페이지
     {
         path: '/:pathMatch(.*)*',

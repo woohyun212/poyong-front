@@ -23,7 +23,7 @@
       </div>
 
       <!-- 프로그램 정보 -->
-      <div class="px-6 -mt-2 relative z-10">
+      <div class="px-3 -mt-2 relative z-10">
         <div class="backdrop-blur-lg bg-white/70 rounded-3xl shadow-xl p-6 border border-white/50 mb-6">
           <h1 class="text-2xl font-bold text-mint-800 mb-2">{{ program.title }}</h1>
 
