@@ -227,7 +227,8 @@ async function handleSubmit() {
     window.alert('설문이 제출되었습니다.')
     router.push('/home')
   } catch (e) {
-    window.alert('제출에 실패했습니다. 다시 시도해 주세요.')
+    window.alert('제출에 실패했습니다.')
+    router.push('/home')
   }
 }
 
