@@ -109,11 +109,19 @@ const routes = [
         name: 'SmartLearningContent',
         component: () => import('@/views/SmartLearningContentScreen.vue')
     },
-    // 404 페이지
     {
-        path: '/:pathMatch(.*)*',
-        redirect: '/home'
-    }
+        path: '/kakao/callback',
+        name: 'KakaoCallback',
+        component: () => import('../views/KakaoCallback.vue'),
+        meta: {
+            title: '카카오 로그인 중'
+        }
+    },
+    // 404 페이지
+    // {
+    //     path: '/:pathMatch(.*)*',
+    //     redirect: '/home'
+    // }
 ]
 
 const router = createRouter({

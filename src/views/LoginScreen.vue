@@ -91,16 +91,25 @@ const userStore = useUserStore()
 //   // 설문 페이지로 이동
 //   router.push('/survey')
 // }
+const KAKAO_JS_KEY = import.meta.env.VITE_KAKAO_JS_KEY
+const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI
+
+onMounted(() => {
+  if (window.Kakao && !window.Kakao.isInitialized()) {
+    window.Kakao.init(KAKAO_JS_KEY)
+  }
+})
 
 const handleLogin = async (provider) => {
-  try {
-    await userStore.login(provider);
-    router.push('/survey');
-  } catch (error) {
-    console.error("Login failed:", error);
-    // Handle login failure (e.g., display an error message)
+  if (provider === 'kakao') {
+    window.Kakao.Auth.authorize({
+      redirectUri: REDIRECT_URI,
+    })
+    return
   }
-};
+
+  // 네이버, 애플 등 다른 로그인 처리 (생략)
+}
 
 const changeLanguage = (lang) => {
   userStore.setLanguage(lang)
