@@ -1,4 +1,5 @@
 import {defineStore} from "pinia";
+import api from "@/utils/axios"
 
 export const useUserStore = defineStore('user', {
   state: () => ({
@@ -10,18 +11,22 @@ export const useUserStore = defineStore('user', {
   }),
 
   actions: {
-    async login(provider) {
-      console.log(`Logging in with ${provider}`)
-      this.isLoggedIn = true
-      this.userInfo = {
-        id: '12345',
-        name: '민지',
-        provider
-      }
-      return this.userInfo
+    setLanguage(lang) {
+      this.language = lang
     },
 
     // ✅ 백엔드에서 전달받은 사용자 정보 설정
+    async setToken(token) {
+      this.accessToken = token
+      localStorage.setItem('access_token', token)  // 저장
+      try {
+        const res = await api.get('/users/me')     // 토큰 자동 첨부됨
+        await this.setUser(res.data)
+      } catch (err) {
+        console.error('Error fetching user info:', err)
+      }
+    },
+
     async setUser(userData) {
       this.isLoggedIn = true
       this.userInfo = userData
@@ -30,20 +35,7 @@ export const useUserStore = defineStore('user', {
     logout() {
       this.isLoggedIn = false
       this.userInfo = null
-      this.diagnosisResults = null
     },
-
-    setDiagnosisResults(results) {
-      this.diagnosisResults = results
-    },
-
-    setLanguage(lang) {
-      this.language = lang
-    },
-
-    setToken(token) {
-      this.accessToken = token;
-    }
   },
   
   getters: {

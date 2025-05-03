@@ -129,7 +129,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import axios from 'axios'
+import api from '@/utils/axios.js'
 
 // Survey questions definition
 const learningQuestions = [
@@ -223,12 +223,13 @@ async function handleSubmit() {
     }
   }
   try {
-    await axios.post('/api/diagnosis/submit', responses.value)
+    console.log(responses.value)
+    await api.post('/diagnosis/submit', responses.value)
     window.alert('설문이 제출되었습니다.')
-    router.push('/home')
+    // router.push('/home')
   } catch (e) {
     window.alert('제출에 실패했습니다.')
-    router.push('/home')
+    // router.push('/home')
   }
 }
 
